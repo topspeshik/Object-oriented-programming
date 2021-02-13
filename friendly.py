@@ -10,7 +10,7 @@ def div(numb):
     return sum1
 
 
-for i in range(1, 10001):
+for i in range(220, 6369):
     m = div(i)
     n = div(m)
     if (i == n) and (i < m):
