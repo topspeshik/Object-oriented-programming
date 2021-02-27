@@ -7,7 +7,7 @@ int main()
 {
     int pow, a, b, c, d, e, f, a1, b1, c1, d1, e1, f1;
 
-    for (int i = 1; i < 1000000; i++)
+    for (int i = 1; i < 32000; i++)
     {
         if (i < 10)
             pow = 1;
@@ -19,8 +19,7 @@ int main()
             pow = 4;
         else if (i < 100000)
             pow = 5;
-        else if (i < 1000000)
-            pow = 6;
+
 
         a1 = 1;
         b1 = 1;
@@ -37,7 +36,7 @@ int main()
         f = i % 10;
 
 
-        cout << a << endl;
+
 
         for (int j = 0; j < pow; j++)
         {
