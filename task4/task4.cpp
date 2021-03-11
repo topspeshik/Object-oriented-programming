@@ -1,5 +1,4 @@
 ﻿
-
 #include <iostream>
 #include <cctype>
 #include <string>
@@ -8,12 +7,11 @@ using namespace std;
 int main()
 {
     string stroka;
-    cin >> stroka;
-
+    getline(cin, stroka);
     double s = 0;
     for (int i = 0; i < stroka.length(); i++)
     {
-        if (stroka[i] == 'c' || (stroka[i] == 'g') || (stroka[i]=='C') || (stroka[i] == 'G'))
+        if (stroka[i] == 'c' || (stroka[i] == 'g') || (stroka[i] == 'C') || (stroka[i] == 'G'))
         {
             s++;
         }
