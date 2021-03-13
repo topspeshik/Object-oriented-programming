@@ -1,3 +1,4 @@
+# Неиспользованные роли и слова автора сделаны немножко убого, но работает
 file = open('role.txt', encoding='utf-8')
 theatre = []
 for row in file:
@@ -8,6 +9,7 @@ roles = []
 textLines = []
 count = 0
 teatr = dict()
+
 
 for i in theatre:
     count = count + 1
@@ -21,19 +23,25 @@ del roles[0]
 textLines = theatre
 arrJ = []
 
-for i in range(0, len(textLines)-1):
+for i in range(0, len(textLines)):
     textLines[i] = str(i+1) + ") " + textLines[i]
 
-
-
+indexI = 0
 for i in roles:
+    indexJ = -1
     arrJ.clear()
     for j in textLines:
-      if j.find(i) > -1:
+        indexJ += 1
+        if j.find(i) > -1:
+            foundRole = 1
+            arrJ.append(j.replace(i + ':' + " ", ""))
+            teatr[i] = arrJ.copy()
+            textLines[indexJ] = "used"
+    if foundRole == 1:
+        roles[indexI] = "used"
+        indexI += 1
+        foundRole = 0
 
-        arrJ.append(j.replace(i + ':' + " ", ""))
-        teatr[i] = arrJ.copy()
-        textLines.remove(j)
 
 
 for i in list(teatr.keys()):
@@ -41,17 +49,13 @@ for i in list(teatr.keys()):
     for j in range(len(teatr[i])):
         print(teatr[i][j])
 
-print(textLines)
+print("Слова автора: ")
 
+for i in textLines:
+    if i.find("used") == -1:
+        print(i)
 
-
-
-
-
-
-
-
-
-
-
-
+print("Неиспользованные роли: ")
+for i in roles:
+    if i.find("used") == -1:
+        print(i)
