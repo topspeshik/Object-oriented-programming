@@ -52,7 +52,6 @@ int main()
     
     multimap<string, string> teatr;
     int foundRole = 0;
-    int countt = 1;
     for (auto i = roles.begin(); i != roles.end(); i++)
     {
         string stri;
@@ -67,7 +66,7 @@ int main()
                 strj.replace(2, stri.length()+2, "");
                 teatr.emplace(stri, strj);
                 *j = "used";
-                countt++;
+                
             }
             
         }
