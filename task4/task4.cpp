@@ -8,6 +8,12 @@ int main()
 {
     string stroka;
     getline(cin, stroka);
+    for (int i = 0; i < stroka.length(); i++) {
+        if (stroka[i] == ' ') {
+            stroka.erase(i, 1);
+            i--;
+        }
+    }
     double s = 0;
     for (int i = 0; i < stroka.length(); i++)
     {
