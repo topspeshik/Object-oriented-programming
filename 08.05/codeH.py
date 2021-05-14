@@ -71,7 +71,7 @@ for g in range(len(word)):
             res = ''
 
     print('Конец Хемминга', arr)
-    randArr = [2, 5, 6, 8, 9, 10, 11, 12]
+    randArr = [2, 5, 6, 8, 9, 10, 11]
     randNumb = random.choice(randArr)
     if arr[randNumb] == 1:
         arr[randNumb] = 0
