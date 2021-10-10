@@ -85,3 +85,5 @@ int main()
 	cout <<  c.getValue();
 
 }
+
+// dopishu pozhe
