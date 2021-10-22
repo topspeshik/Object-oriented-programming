@@ -75,6 +75,9 @@ class Number:
     def __lt__(self, other):
         return self.value < other.value
 
+    def __str__(self):
+        return str(self.value)
+
 
 i = 1
 print('Введите экземпляр а')
@@ -93,5 +96,7 @@ num = int(input())
 print('a+b: ', a+b)
 print('numb/a', numb/a)
 print('c-a', c-a)
-arr = [(a, 'a'),(b,'b'),(c,'c')] #сортировка кривая, но я не знал как по другому сделать
-print(sorted(arr))
+arr = [a,b,c] #сортировка кривая, но я не знал как по другому сделать
+arr.sort()
+for i in arr:
+    print(i)
