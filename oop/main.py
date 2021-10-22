@@ -79,7 +79,7 @@ class Number:
         return str(self.value)
 
 
-i = 1
+
 print('Введите экземпляр а')
 a = Number(int(input()))
 print('Введите экземпляр b')
@@ -91,8 +91,6 @@ second = int(input())
 c = Number(numb, first, second)
 print('Введите число')
 num = int(input())
-
-
 print('a+b: ', a+b)
 print('numb/a', numb/a)
 print('c-a', c-a)
