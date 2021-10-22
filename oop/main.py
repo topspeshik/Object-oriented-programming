@@ -85,9 +85,8 @@ try:
     print('Введите экземпляр b')
     b = Number(int(input()))
     print('Введите экземпляр c, затем в какую систему счисления надо вывести, затем в которой находится ')
-    numb = int(input())
-    first = int(input())
-    second = int(input())
+
+    numb, first, second  = map(int, input().split())
     c = Number(numb, first, second)
     print('Введите число')
     num = int(input())
@@ -96,6 +95,7 @@ try:
     print('c-a', c-a)
     arr = [a,b,c] #сортировка кривая, но я не знал как по другому сделать
     arr.sort()
+    print('Сортировка')
     for i in arr:
         print(i)
 except ValueError:
