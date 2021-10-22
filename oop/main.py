@@ -84,19 +84,27 @@ try:
     a = Number(int(input()))
     print('Введите экземпляр b')
     b = Number(int(input()))
+    print('Введите число')
+    num = int(input())
+except ValueError:
+    print('Вы ввели строку вместо числа')
+
+try:
     print('Введите экземпляр c, затем в какую систему счисления надо вывести, затем в которой находится ')
 
     numb, first, second  = map(int, input().split())
     c = Number(numb, first, second)
-    print('Введите число')
-    num = int(input())
-    print('a+b: ', a+b)
-    print('numb/a', numb/a)
-    print('c-a', c-a)
-    arr = [a,b,c] #сортировка кривая, но я не знал как по другому сделать
-    arr.sort()
-    print('Сортировка')
-    for i in arr:
-        print(i)
 except ValueError:
     print('Вы ввели неправильно системы счисления')
+try:
+    print('a+b: ', a+b)
+    print('numb/a: ', numb/a)
+    print('c-a: ', c-a)
+    arr = [a,b,c] #сортировка кривая, но я не знал как по другому сделать
+    arr.sort()
+    print('Сортировка: ')
+    for i in arr:
+        print(i)
+except NameError:
+    print('Вы ввели строку вместо числа')
+
