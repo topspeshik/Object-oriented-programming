@@ -79,22 +79,24 @@ class Number:
         return str(self.value)
 
 
-
-print('Введите экземпляр а')
-a = Number(int(input()))
-print('Введите экземпляр b')
-b = Number(int(input()))
-print('Введите экземпляр c и системы счисления, в какую систему счисления надо вывести, в которой находится ')
-numb = int(input())
-first = int(input())
-second = int(input())
-c = Number(numb, first, second)
-print('Введите число')
-num = int(input())
-print('a+b: ', a+b)
-print('numb/a', numb/a)
-print('c-a', c-a)
-arr = [a,b,c] #сортировка кривая, но я не знал как по другому сделать
-arr.sort()
-for i in arr:
-    print(i)
+try:
+    print('Введите экземпляр а')
+    a = Number(int(input()))
+    print('Введите экземпляр b')
+    b = Number(int(input()))
+    print('Введите экземпляр c, затем в какую систему счисления надо вывести, затем в которой находится ')
+    numb = int(input())
+    first = int(input())
+    second = int(input())
+    c = Number(numb, first, second)
+    print('Введите число')
+    num = int(input())
+    print('a+b: ', a+b)
+    print('numb/a', numb/a)
+    print('c-a', c-a)
+    arr = [a,b,c] #сортировка кривая, но я не знал как по другому сделать
+    arr.sort()
+    for i in arr:
+        print(i)
+except ValueError:
+    print('Вы ввели неправильно системы счисления')
