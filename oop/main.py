@@ -109,3 +109,5 @@ except NameError:
     print('Вы ввели строку вместо числа')
 except ValueError:
     print('Вы ввели отрицательное значение')
+except ZeroDivisionError:
+    print('Нельзя делить на ноль!!!!!!!!!!!!!!!!!!!!!!!!!!!')
