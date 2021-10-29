@@ -100,11 +100,12 @@ try:
     print('a+b: ', a+b)
     print('numb/a: ', numb/a)
     print('c-a: ', c-a)
-    arr = [a,b,c] #сортировка кривая, но я не знал как по другому сделать
+    arr = [a,b,c]
     arr.sort()
     print('Сортировка: ')
     for i in arr:
         print(i)
 except NameError:
     print('Вы ввели строку вместо числа')
-
+except ValueError:
+    print('Вы ввели отрицательное значение')
