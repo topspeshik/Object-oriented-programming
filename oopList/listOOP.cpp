@@ -1,8 +1,8 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 
-template<typename T>
+template<typename T1>
 class List
 {
 public:
@@ -12,21 +12,21 @@ public:
 		frst = nullptr;
 	}
 
-	void push_back(T data)
+	void push_back(T1 data)
 	{
 		if (frst == nullptr)
 		{
-			frst = new Node<T>(data);
+			frst = new Node<T1>(data);
 		}
 		else
 		{
-			Node<T>* cur = this->frst;
+			Node<T1>* cur = this->frst;
 
 			while (cur->next != nullptr)
 			{
 				cur = cur->next;
 			}
-			cur->next = new Node<T>(data);
+			cur->next = new Node<T1>(data);
 
 		}
 
@@ -35,11 +35,11 @@ public:
 
 	
 
-	T& operator[](const int index)
+	T1& operator[](const int index)
 	{
 		int counter = 0;
 
-		Node<T>* cur = this->frst;
+		Node<T1>* cur = this->frst;
 
 
 		while (cur != nullptr)
@@ -61,7 +61,7 @@ public:
 	{
 		if ((length -1) == 0)
 		{
-			Node<T>* temp = frst;
+			Node<T1>* temp = frst;
 
 			frst = frst->next;
 
@@ -71,14 +71,14 @@ public:
 		}
 		else
 		{
-			Node<T>* previous = this->frst;
+			Node<T1>* previous = this->frst;
 			for (int i = 0; i < length - 2; i++)
 			{
 				previous = previous->next;
 			}
 
 
-			Node<T>* toDelete = previous->next;
+			Node<T1>* toDelete = previous->next;
 
 			previous->next = toDelete->next;
 
@@ -96,7 +96,7 @@ public:
 
 		int counter = 0;
 
-		Node<T>* cur = this->frst;
+		Node<T1>* cur = this->frst;
 
 
 		while (cur != nullptr)
@@ -181,7 +181,7 @@ public:
 	int Find(int value)
 	{	
 
-		Node<T>* cur = this->frst;
+		Node<T1>* cur = this->frst;
 		int count = 0;
 		while (cur->data != value)
 		{
@@ -197,9 +197,9 @@ public:
 
 	void reverse()
 	{
-		Node<T>* prev = nullptr;
-		Node<T>* next;
-		Node<T>* cur = frst;
+		Node<T1>* prev = nullptr;
+		Node<T1>* next;
+		Node<T1>* cur = frst;
 		while (cur != nullptr)
 		{
 			next = cur->next;
@@ -214,7 +214,7 @@ public:
 	{
 		while (length)
 		{
-			Node<T>* temp = frst;
+			Node<T1>* temp = frst;
 
 			frst = frst->next;
 
@@ -252,7 +252,7 @@ private:
 		}
 	};
 	int length;
-	Node<T>* frst;
+	Node<T1>* frst;
 };
 
 
@@ -311,4 +311,3 @@ int main()
 	}
 	return 0;
 }
-
