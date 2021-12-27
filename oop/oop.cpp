@@ -36,7 +36,7 @@ public:
 
 	friend Number operator ^(const Number& v1, const Number& v2);
 
-	friend ostream& operator<< (std::ostream& out, const Number& v);
+	friend ostream& operator<< (ostream& out, const Number& v);
 
 	void sort(Number *arr, int size)
 	{
