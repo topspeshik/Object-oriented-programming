@@ -36,6 +36,8 @@ public:
 
 	friend Number operator ^(const Number& v1, const Number& v2);
 
+	friend ostream& operator<< (std::ostream& out, const Number& v);
+
 	void sort(Number *arr, int size)
 	{
 		Number temp;
@@ -171,6 +173,11 @@ Number operator^(const Number& v1, const Number& v2)
 	return Number(pow(v1.value, v2.value));
 }
 
+ostream& operator<<(ostream& os, const Number& v) {
+	return os << v.value << endl;
+}
+
+
 
 
 
@@ -185,7 +192,7 @@ int main()
 	Number c(3);
 	Number d(10);
 
-
+	cout << a + b << endl;
 	cout << "Сложение экземпляра a = 22 и b = 33" << endl;
 
 	Number sum = b + a;
